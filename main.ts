@@ -1,18 +1,24 @@
-//  Blinking hearts (from MakeCode tutorial)
-//  Start instructions
+//  Smiley buttons (from MakeCode tutorial)
+//  Instructions if button A is pressed
+//  End of instructions 
+//  If the button pressed is A, follow those instructions
+input.onButtonPressed(Button.A, function on_button_pressed_a() {
+    //  Show a happy icon
+    basic.showIcon(IconNames.Happy)
+})
+//  Instructions if button B is pressed
 //  End of instructions
-//  Run the instructions on a loop without end
-basic.forever(function on_forever() {
-    //  Show a heart icon
-    basic.showIcon(IconNames.Heart)
-    //  Clear the screen
-    basic.clearScreen()
-    //  Wait x milliseconds
-    basic.pause(500)
-    //  Show a small heart icon
-    basic.showIcon(IconNames.SmallHeart)
-    //  Clear the screen
-    basic.clearScreen()
-    //  Wait x milliseconds
-    basic.pause(500)
+//  If the button pressed is B, follow those instructions
+input.onButtonPressed(Button.B, function on_button_pressed_b() {
+    //  Show a sad icon
+    basic.showIcon(IconNames.Sad)
+})
+//  Instructions of both A and B are pressed together (a separate button in virtual version)
+//  End of instructions 
+//  If the buttons A and B are pressed together, follow those instructions
+input.onButtonPressed(Button.AB, function on_button_pressed_ab() {
+    //  Show a silly icon
+    basic.showIcon(IconNames.Silly)
+    //  Show a surprised icon
+    basic.showIcon(IconNames.Surprised)
 })
